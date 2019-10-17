@@ -1,0 +1,8 @@
+mixin list(settings)
+    ul.list(class= attributes.class)
+        each list in settings.advantages
+            li.list__item
+                if settings.icon
+                    div.list__item__wrap.list__item__icon
+                        i.fa.fa-check(aria-hidden="true")
+                div.list__item__wrap.list__item__text= list

@@ -1,0 +1,58 @@
+extends ../../base/index
+
+include ../../features/section/index
+include ../../features/tariff/index
+
+block stylesheets
+    link(rel="stylesheet", href="index.css")
+
+block content
+    +section({ className: 'section-price' })
+        +tariff({
+          title: 'Basic',
+          subtitle: 'Website',
+          price: '99',
+          description: 'Simple website made in the world`s most popular CMS system, Wordpress',
+          advantages: [
+            'Website in WordPress',
+            '3 sub pages',
+            'Theme customized',
+            'Help and guidance',
+            'System introduction',
+            '2 weeks free support',
+          ],
+          href: 'order.php?tariff=basic',
+        })(class="tariff__basic")
+        +tariff({
+          title: 'Business',
+          subtitle: 'Website',
+          price: '299',
+          description: 'Advanced website made in the world`s most popular CMS system, Wordpress',
+          advantages: [
+            'Website in WordPress',
+            '3-5 sub pages',
+            'Theme customized',
+            'Help and guidance',
+            'System introduction',
+            '1 month free support',
+            'free coffee for CEO',
+          ],
+          href: 'order.php?tariff=business',
+        })(class="tariff__business tariff__popular")
+        +tariff({
+          title: 'Webshop',
+          subtitle: 'Website',
+          price: '599',
+          description: 'Your very own webshop made in the world`s most popular CMS system, Wordpress',
+          advantages: [
+            'Website in WordPress',
+            '3-5 sub pages',
+            'Theme customized',
+            'Help and guidance',
+            'System introduction',
+            '1 month free support',
+            'free coffee for CEO',
+            'stripteaser to CEO`s birthday',
+          ],
+          href: 'order.php?tariff=webshop',
+        })(class="tariff__webshop")

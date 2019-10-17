@@ -1,0 +1,21 @@
+@import ../../common/variables
+
+.section
+  display: flex
+  justify-content: center
+  position: relative
+  padding-top: 5vh
+  padding-bottom: 5vh
+  background-color: $color--dark-blue
+
+  &__container
+    display: grid
+    grid-gap: 20px
+    position: relative
+    width: 100%
+
+  &-price
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr))
+
+    @media(min-width: 1280px)
+      width: 1280px

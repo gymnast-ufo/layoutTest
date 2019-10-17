@@ -1,0 +1,23 @@
+include ../../common/components/button/index
+include ../../common/components/list/index
+
+mixin tariff(settings)
+    div.tariff(class= attributes.class)
+        div.tariff--wrapper
+            div.tariff__container.tariff__header
+                div.tariff__title= settings.title
+                div.tariff__subtitle= settings.subtitle
+            div.tariff__container.tariff__price
+                div.tariff__price__item= settings.price
+            div.tariff__container
+                div.tariff__description= settings.description
+            div.tariff__advantages
+                +list({advantages: settings.advantages, icon: true})(class="custom-scroll")
+            div.tariff__container
+                div.tariff__order
+                    +button({
+                      attributes: {
+                        href: settings.href,
+                        class: "btn__tariff"
+                      }
+                    })= settings.text

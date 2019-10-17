@@ -1,0 +1,83 @@
+@import ../../common/variables
+
+.tariff
+  display: inline-flex
+  position: relative
+  color: #ffffff
+  overflow: hidden
+
+  &--wrapper
+    display: grid
+    grid-template-rows: repeat(3, auto) 1fr auto
+    position: relative
+    width: 100%
+    background-color: $color--dark-green
+
+  &__container
+    display: flex
+    flex-flow: column nowrap
+    padding: 3vmin 0
+    text-align: center
+
+  &__header
+
+  &__title
+    font-size: 7vmin
+    font-weight: 600
+
+    @media(min-width: $desktop--width)
+      font-size: 4vmin
+
+  &__subtitle
+    font-size: 4vmin
+
+    @media(min-width: $desktop--width)
+      font-size: 2vmin
+
+  &__price
+    background-color: var(--special-color)
+    font-size: 8vmin
+    font-weight: 600
+    letter-spacing: 2px
+
+    @media(min-width: $desktop--width)
+      font-size: 5vmin
+
+    &__item
+
+      &:after
+        content: '€'
+
+  &__description
+    padding-left: 5%
+    padding-right: 5%
+
+  &__advantages
+
+  &__order
+
+  &__popular
+
+    &:after
+      content: 'popular'
+      display: inline-flex
+      justify-content: center
+      width: 100%
+      position: absolute
+      top: 5%
+      left: 100%
+      padding: 7px
+      transform: translate(-60%, -60%) rotate(45deg)
+      transform-origin: 50% 50%
+      background-color: $color--red
+      text-transform: uppercase
+      font-weight: 600
+
+  &__basic
+    --special-color: #5BB189
+
+  &__business
+    --special-color: #3A6BA5
+
+  &__webshop
+    --special-color: #EC632A

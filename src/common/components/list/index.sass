@@ -1,0 +1,26 @@
+@import ../../variables
+
+.list
+  display: flex
+  flex-flow: column nowrap
+  position: relative
+  margin: 0
+  padding: 0
+  list-style: none
+
+  &__item
+    display: flex
+    flex-flow: row nowrap
+    position: relative
+
+    &:nth-child(2n-1)
+      background-color: $color--dark-dark-blue
+
+    &__wrap
+      padding: 20px
+      white-space: nowrap
+
+    &__icon
+      color: var(--special-color)
+
+    &__text

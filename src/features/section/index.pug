@@ -1,0 +1,5 @@
+mixin section(settings)
+    section.section
+        div.section__container(class=settings && settings.className, id=settings && settings.id)
+            if block
+                block
